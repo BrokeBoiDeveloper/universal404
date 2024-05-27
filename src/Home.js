@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Home.css";
-import { ReactComponent as NavButton } from "./Nav_button.svg";
-import { ReactComponent as Logo } from "./logo.svg";
-import PopupWindow from "./PopupWindow";
+import { ReactComponent as NavButton } from "./assets/Nav_button.svg";
+import { ReactComponent as Logo } from "./assets/logo.svg";
+import PopupWindow from "./components/PopupWindow";
 
-export const Home = () => {
+const Home = () => {
   const [selectedSection, setSelectedSection] = useState("home");
 
   const handleSectionClick = (section) => {
@@ -33,8 +33,6 @@ export const Home = () => {
                   ? "nav-button-about"
                   : selectedSection === "links"
                   ? "nav-button-links"
-                  : selectedSection === "roadmap"
-                  ? "nav-button-roadmap"
                   : selectedSection === "swap"
                   ? "nav-button-swap"
                   : "nav-button-home"
@@ -44,30 +42,40 @@ export const Home = () => {
               <div
                 className="text-wrapper-home"
                 onClick={() => handleSectionClick("home")}
+                aria-label="Home"
+                role="button"
+                tabIndex={0}
+                onKeyPress={() => handleSectionClick("home")}
               >
                 HOME
               </div>
               <div
                 className="text-wrapper-3"
                 onClick={() => handleSectionClick("about")}
+                aria-label="About"
+                role="button"
+                tabIndex={0}
+                onKeyPress={() => handleSectionClick("about")}
               >
                 ABOUT
               </div>
               <div
                 className="text-wrapper-4"
                 onClick={() => handleSectionClick("links")}
+                aria-label="Links"
+                role="button"
+                tabIndex={0}
+                onKeyPress={() => handleSectionClick("links")}
               >
                 LINKS
               </div>
               <div
                 className="text-wrapper-5"
-                onClick={() => handleSectionClick("roadmap")}
-              >
-                ROADMAP
-              </div>
-              <div
-                className="text-wrapper-6"
                 onClick={() => handleSectionClick("swap")}
+                aria-label="Swap"
+                role="button"
+                tabIndex={0}
+                onKeyPress={() => handleSectionClick("swap")}
               >
                 SWAP
               </div>
@@ -81,8 +89,13 @@ export const Home = () => {
         </div>
       </div>
       {selectedSection !== "home" && (
-        <PopupWindow onClose={() => handleSectionClick("home")} />
+        <PopupWindow
+          title={selectedSection.toUpperCase()}
+          onClose={() => handleSectionClick("home")}
+        />
       )}
     </div>
   );
 };
+
+export default Home;

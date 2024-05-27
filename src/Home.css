@@ -25,17 +25,17 @@ body {
 /* Interactive section */
 .home .interactive-section {
   position: relative;
-  width: 80%;
-  height: 110%;
-  scale: 70%;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.75); /* Using transform instead of scale */
   display: grid;
   place-items: center;
 }
 
 /* Logo */
 .home .logo-instance {
-  width: 141px;
-  height: 195px;
+  width: 160px;
+  height: 160px;
 }
 
 /* Text block */
@@ -107,7 +107,7 @@ body {
 
 /* Navigation indicator */
 .home .nav-indicator {
-  height: 120px;
+  height: 100px; /* Adjusted height */
   right: 0px;
   position: absolute;
   top: 0;
@@ -118,8 +118,7 @@ body {
 .home .text-wrapper-home,
 .home .text-wrapper-3,
 .home .text-wrapper-4,
-.home .text-wrapper-5,
-.home .text-wrapper-6 {
+.home .text-wrapper-5 {
   color: #FF122E;
   font-family: "Space Grotesk-Bold", Helvetica;
   font-size: 23.7px;
@@ -148,10 +147,6 @@ body {
   top: 90px;
 }
 
-.home .text-wrapper-6 {
-  top: 120px;
-}
-
 /* Color block */
 .home .color-block {
   height: 48px;
@@ -163,7 +158,7 @@ body {
 
 /* Rectangle 2 */
 .home .rectangle-2 {
-  background-color: #ec4e23;
+  background-color: #FF122E;
   height: 24px;
   left: 0;
   position: absolute;
@@ -202,10 +197,6 @@ body {
   top: 60px !important;
 }
 
-.home .nav-button.nav-button-roadmap {
-  top: 90px !important;
-}
-
 .home .nav-button.nav-button-swap {
-  top: 120px !important;
+  top: 90px !important;
 }
