@@ -1,0 +1,23 @@
+.swap-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.swap-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.swap-text {
+  font-family: "Space Grotesk-Bold", Helvetica;
+  font-weight: bold;
+  font-size: 24pt;
+  color: #FFFFFF;
+  position: relative;
+  display: inline-block;
+  white-space: pre-wrap;
+}
